@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--title-->
+    <title>Project S110</title>
+
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Theme Park website for Project S110">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--external css-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/park.css" rel="stylesheet" type="text/css">
+
+    <!--internal css-->
+    <style>
+        h3 {
+            text-align: center;
+        }
+        
+        .transportmode {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!--website view buttons-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col TitleButton">
+                <button type="button" id="updateandpromo">Latest Promotions/Impt. Updates</button>
+            </div>
+            <div class="col TitleButton">
+                <div id="openingtime">
+                    Opening Time for today <br />
+                    <span id="openingHours"></span>
+                </div>
+            </div>
+            <div class="col TitleButton">
+
+                <button type="button" id="buyticks">BUY <br/> TICKETS</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Logo and title-->
+    <div id="logoandtitle">
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 20%;">
+                    <!---Logo Pic-->
+                    <a href="index.html">
+                        <img src="images/Logov2.png" alt="" width="80%" height="200px">
+                    </a>
+                </td>
+                <td style="width: 80%;">
+                    <!--TITLE-->
+                    <h1 style="text-align: center; font-size: 70px;"> <b style="color: red;">PAST</b> <b style="color: purple;">2</b> <b style="color: blue;">FUTURE</b><b style="color: #F1690A;"> PARK</b></h1>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <!--menu bar in mobile view-->
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+                    <span class="navbar-toggler-icon"></span> 
+                </button>
+
+            <div class="collapse navbar-collapse"></div>
+
+            <!--navbar menu in webview-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">Home </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="attraction.html">Attraction </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="accommodation.html">Accommodation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <!--Page header-->
+        <h1 style="text-align: center; position: relative;"><b>ABOUT US</b></h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <!--table location and the mode of transportation-->
+                <table style="width: 100%;">
+                    <tr>
+                        <td>
+                            <!--smaller header for the location-->
+                            <h3>Location</h3>
+                            <!--address-->
+                            <p style="text-align: center;"> 8 Sentosa Gateway Singapore 098269</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="transportmode">
+                                <!--train transportation-->
+                                <h4>By train</h4>
+                                <!--bullet list for the train transportation-->
+                                <ul style="list-style: none;">
+                                    <li>
+                                        NorthEast Line (NE1)
+                                    </li>
+                                    <li>
+                                        Circle Line (CC29)
+                                    </li>
+                                    <li>
+                                        MonoRail from VivoCity
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <div class="transportmode">
+                                <!--bus transportation-->
+                                <h4>By Bus</h4>
+                                <!--bullet list for the bus transportation-->
+                                <ul style="list-style: none;">
+                                    <li>
+                                        From Choa Chu Kang(CCK) to P2F: 188R
+                                    </li>
+                                    <li>
+                                        From Woodlands to P2F: 963R
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7977.725021005931!2d103.81866727412584!3d1.2541673463409495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1955a615a343%3A0x3094037d34e6529f!2sUniversal%20Studios%20Singapore!5e0!3m2!1sen!2ssg!4v1607065726455!5m2!1sen!2ssg"
+                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <!--opening hours-->
+    <div class="container-fluid">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th colspan="2">
+                        <h4 style="text-align: center;">Opening Hours</h4>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="width: 50%;">
+                        <ul style="list-style: none; text-align: center;">
+                            <li>
+                                Monday
+                            </li>
+                            <li>
+                                Tuesday
+                            </li>
+                            <li>
+                                Wednesday
+                            </li>
+                            <li>
+                                Thursday
+                            </li>
+                        </ul>
+                    </td>
+                    <td style="width: 50%;">
+                        <p style="text-align: center; position: relative; padding-top: 30px;">10am - 9:30pm</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul style="list-style: none; text-align: center;">
+                            <li>
+                                Friday
+                            </li>
+                            <li>
+                                Saturday
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p style="text-align: center; position: relative; padding-top: 10px;">10am - 10:30pm</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul style="list-style: none; text-align: center;">
+                            <li>
+                                Sunday
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p style="text-align: center; position: relative;">9am - 10:30pm</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--footer-->
+    <footer>
+        <table style="width: 100%; border:none">
+            <tr>
+                <!--contact us details-->
+                <td style="width: 20%;">
+                    <h4>Contact Us</h4>
+
+                    <b>+65 xxxx xxxx</b>
+                </td>
+                <td style="width: 60%;">
+                    <h4 style="text-align: center;">Opening hours today:
+                        <br />
+                        <span id="openingHours2"></span></h4>
+                </td>
+                <td style="width: 20%;">
+                    <div class="container">
+                        <!--social medai links-->
+                        <h4>LINKS</h4>
+                        <div class="row row-cols-2">
+                            <div class="col">
+                                <img src="images/instagram.jpg" alt="" width="30" height="30">
+                            </div>
+                            <div class="col">
+                                <img src="images/facebook.png" alt="" width="30" height="30">
+                            </div>
+                            <div class="col">
+                                <img src="images/twitter.jpg" alt="" width="30" height="30">
+                            </div>
+                            <div class="col">
+                                <img src="images/pinterest.jpg" alt="" width="30" height="30">
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <!--button links-->
+        <button type="button" class="footerbuttons">BUY TICKETS</button>
+        <button type="button" class="footerbuttons">Careers</button>
+        <button type="button" class="footerbuttons">Corporate Enquiries</button>
+    </footer>
+</body>
+<!--javascript file -->
+<script src="javascript/jquery.min.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/openinghours.js"></script>
+
+</html>

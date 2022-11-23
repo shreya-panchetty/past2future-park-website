@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--title-->
+    <title>Project S110</title>
+
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Theme Park website for Project S110">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--external css-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/park.css" rel="stylesheet" type="text/css">
+
+    <!--internal css-->
+    <style>
+        h2 {
+            text-align: center;
+            position: relative;
+        }
+        
+        .hotelimg {
+            align-items: center;
+            position: relative;
+            width: 100%;
+        }
+        
+        .HotelsContent {
+            width: 100%;
+        }
+        
+        .HotelsContent,
+        tr,
+        th {
+            width: 100%;
+        }
+        
+        .HotelsContent,
+        tr,
+        td {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!--navbar-->
+    <!--website view buttons-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col TitleButton">
+                <button type="button" id="updateandpromo">Latest Promotions/Impt. Updates</button>
+            </div>
+            <div class="col TitleButton">
+                <div id="openingtime">
+                    Opening Time for today <br />
+                    <span id="openingHours"></span>
+                </div>
+            </div>
+            <div class="col TitleButton">
+
+                <button type="button" id="buyticks">BUY <br/> TICKETS</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Logo and title-->
+    <div id="logoandtitle">
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 20%;">
+                    <!---Logo Pic-->
+                    <a href="index.html">
+                        <img src="images/Logov2.png" alt="" width="80%" height="200px">
+                    </a>
+                </td>
+                <td style="width: 80%;">
+                    <!--TITLE-->
+                    <h1 style="text-align: center; font-size: 70px;"> <b style="color: red;">PAST</b> <b style="color: purple;">2</b> <b style="color: blue;">FUTURE</b><b style="color: #F1690A;"> PARK</b></h1>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <!--menu bar in mobile view-->
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+                    <span class="navbar-toggler-icon"></span> 
+                </button>
+
+            <div class="collapse navbar-collapse"></div>
+
+            <!--navbar menu in webview-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">Home </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="attraction.html">Attraction </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="accommodation.html">Accommodation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <!--Page header-->
+        <h1 style="text-align: center; position: relative;"><b>ACCOMMODATION</b></h1>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <!--hotel name-->
+                <h2> Beach Villas</h2>
+                <a href="https://www.rwsentosa.com/en/hotels/beach-villas/overview">
+                    <img src="images/BeachVillas.jpg" class="hotelimg" alt="" height="470">
+                </a>
+            </div>
+            <div class="col">
+                <h2>Festive Hotel </h2>
+                <a href="https://www.rwsentosa.com/en/hotels/festive-hotel">
+                    <img src="images/FestiveHotel.jpg" class="hotelimg" alt="" height="470">
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h2>Hard Rock® Hotel Singapore </h2>
+                <a href="https://www.rwsentosa.com/en/hotels/hard-rock-hotel-singapore">
+                    <img src="images/HardRockHotelSG.jpg" class="hotelimg" alt="" height="470">
+                </a>
+            </div>
+            <div class="col">
+                <h2>Crockfords Tower</h2>
+                <a href="https://www.rwsentosa.com/en/hotels/crockfords-tower">
+                    <img src="images/CrockfordsTower.jpg" class="hotelimg" alt="" height="470">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>Equarius Hotel™</h2>
+                <a href="https://www.rwsentosa.com/en/hotels/equarius-hotel">
+                    <img src="images/EquariusHotel.jpg" class="hotelimg" alt="" height="470">
+                </a>
+            </div>
+            <div class="col">
+                <h2>Treetop Lofts</h2>
+                <a href="https://www.rwsentosa.com/en/hotels/treetop-lofts">
+                    <img src="images/treetop.jpg" class="hotelimg" alt="" height="470">
+                </a>
+            </div>
+        </div>
+    </div>
+    <br />
+    <!--footer-->
+    <footer>
+        <table style="width: 100%; border:none">
+            <tr>
+                <!--contact us details-->
+                <td style="width: 20%;">
+                    <h4>Contact Us</h4>
+
+                    <b>+65 xxxx xxxx</b>
+                </td>
+                <td style="width: 60%;">
+                    <h4 style="text-align: center;">Opening hours today:
+                        <br />
+                        <span id="openingHours2"></span></h4>
+                </td>
+                <td style="width: 20%;">
+                    <div class="container">
+                        <!--social medai links-->
+                        <h4>LINKS</h4>
+                        <div class="row row-cols-2">
+                            <div class="col">
+                                <img src="images/instagram.jpg" alt="" width="30" height="30">
+                            </div>
+                            <div class="col">
+                                <img src="images/facebook.png" alt="" width="30" height="30">
+                            </div>
+                            <div class="col">
+                                <img src="images/twitter.jpg" alt="" width="30" height="30">
+                            </div>
+                            <div class="col">
+                                <img src="images/pinterest.jpg" alt="" width="30" height="30">
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <!--button links-->
+        <button type="button" class="footerbuttons">BUY TICKETS</button>
+        <button type="button" class="footerbuttons">Careers</button>
+        <button type="button" class="footerbuttons">Corporate Enquiries</button>
+    </footer>
+</body>
+<!--javascript file -->
+<script src="javascript/jquery.min.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/openinghours.js"></script>
+
+</html>

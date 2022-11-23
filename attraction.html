@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--title-->
+    <title>Project S110</title>
+
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Theme Park website for Project S110">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--external css-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/park.css" rel="stylesheet" type="text/css">
+
+    <!--Internal/Embedded CSS-->
+    <style>
+        h1 {
+            text-align: center;
+        }
+        
+        h3 {
+            text-align: center;
+        }
+        
+        .attractionbullet {
+            list-style: none;
+            font-size: x-large;
+        }
+        
+        .themeTitle1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: purple;
+            color: white;
+        }
+        
+        .themeTitle2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: rgb(255, 140, 0);
+        }
+        
+        .themeTitle3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: rgb(30, 180, 62);
+        }
+        
+        #spacetheme {
+            background-image: url("images/spacetheme.jpg"), linear-gradient(rgba(45, 106, 175, 250), rgba(45, 106, 175, 250));
+            background-blend-mode: overlay;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+        
+        #traditionaltheme {
+            background-image: url("images/castlebackground.jpg"), linear-gradient(rgba(45, 106, 175, 10), rgba(45, 106, 175, 10));
+            background-blend-mode: overlay;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+        
+        #funtimetheme {
+            background-image: url("images/funtimebackground.jpg"), linear-gradient(rgba(45, 106, 175, 10), rgba(45, 106, 175, 10));
+            background-blend-mode: overlay;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--navbar-->
+    <!--website view buttons-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col TitleButton">
+                <button type="button" id="updateandpromo">Latest Promotions/Impt. Updates</button>
+            </div>
+            <div class="col TitleButton">
+                <div id="openingtime">
+                    Opening Time for today <br />
+                    <span id="openingHours"></span>
+                </div>
+            </div>
+            <div class="col TitleButton">
+
+                <button type="button" id="buyticks">BUY <br/> TICKETS</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Logo and title-->
+    <div id="logoandtitle">
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 20%;">
+                    <!---Logo Pic-->
+                    <a href="index.html">
+                        <img src="images/Logov2.png" alt="" width="80%" height="200px">
+                    </a>
+                </td>
+                <td style="width: 80%;">
+                    <!--TITLE-->
+                    <h1 style="text-align: center; font-size: 70px;"> <b style="color: red;">PAST</b> <b style="color: purple;">2</b> <b style="color: blue;">FUTURE</b><b style="color: #F1690A;"> PARK</b></h1>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <!--menu bar in mobile view-->
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+                    <span class="navbar-toggler-icon"></span> 
+                </button>
+
+            <div class="collapse navbar-collapse"></div>
+
+            <!--navbar menu in webview-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">Home </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="attraction.html">Attraction <span class="sr-only">(current)</span> </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="accommodation.html">Accommodation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        <!--div-->
+        <div class="container-fluid">
+            <div class="row">
+                <!--col on the left-->
+                <div class="col-2">
+                    <!--left side nav bar-->
+                    <div id="attractionsSideBar">
+                        <table style="margin-top: 50px" align="left" width="100%" border="2">
+                            <tr>
+                                <td>
+                                    <a class="nav-link" href="#" onclick="DisplayAttraction('future')">
+                                        <h5>Soar into the future</h5>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="nav-link" href="#" onclick="DisplayAttraction('past')">
+                                        <h5>Reliving the Past</h5>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="nav-link" href="#" onclick="DisplayAttraction('funtime')">
+                                        <h5>Fun Time</h5>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="nav-link" href="#" onclick="DisplayAttraction('lightshow')">
+                                        <h5>5D lightshow</h5>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="nav-link" href="#" onclick="DisplayAttraction('wildwest')">
+                                        <h5>Wild West Show schedule</h5>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="nav-link" href="#" onclick="DisplayAttraction('medieval')">
+                                        <h5>Magical Middle Ages Show schedule</h5>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="nav-link" href="#" onclick="DisplayAttraction('space')">
+                                        <h5>Space: The Penultimate Frontier Show schedule</h5>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="nav-link" href="#" onclick="DisplayAttraction('food')">
+                                        <h5>Dining</h5>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!--attraction list in table-->
+                <div class="col-10">
+                    <br />
+                    <h1 id="AttractionTitle" hidden="true"><b></b></h1>
+                    <div id="future" class="container-fluid">
+                        <div class="row">
+                            <div class="col-4 themeTitle1">
+                                <h1 style="text-align: center;"><b>Soar into the future</b></h1>
+                            </div>
+                            <div class="col-8" id="spacetheme">
+                                <h4>If you want to witness and experiecne the future, then come and join us at our soae in to future. This is the place where you and your families can immerse.</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <a class="nav-link" href="#"><img src="images/FlightSimPod.jpg" alt="" height="400px" width="100%"></a>
+                                <p style="text-align: center; font-size: xx-large;">Space Chaser</p>
+                            </div>
+                            <div class="col">
+                                <a class="nav-link" href="#"><img src="images/Virtual-reality.jpg" alt="" height="400px" width="100%"></a>
+                                <p style="text-align: center; font-size: xx-large;">VR Space Rider</p>
+                            </div>
+                            <div class="col">
+                                <a class="nav-link" href="#"><img src="images/rides.jpg" height="400px" alt="" width="100%"></a>
+                                <p style="text-align: center; font-size: xx-large;">Malfunctional Propeller</p>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                    <div id="traditional" class="container-fluid">
+                        <div class="row">
+                            <div class="col-4 themeTitle2">
+                                <h1 style="text-align: center;"><b>Reliving the Past</b></h1>
+                            </div>
+                            <div class="col-8" id="traditionaltheme">
+                                <h4>Get ready to experience the bygone eras in the reliving the past which explores the traditions and cultures from the past!</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <a class="nav-link" href="#"><img src="images/boatride2.jpg" height="400px" alt="" width="100%"></a>
+                                <p style="text-align: center; font-size: xx-large;">Renaissance's Trail</p>
+                            </div>
+                            <div class="col">
+                                <a class="nav-link" href="#"><img src="images/boatride.jpg" width="100%" alt="" height="400px"></a>
+                                <p style="text-align: center; font-size: xx-large;">Viking Water Ride</p>
+                            </div>
+                            <div class="col">
+                                <a class="nav-link" href="#"><img src="images/bridge.jpg" width="100%" alt="" height="400px"></a>
+                                <p style="text-align: center; font-size: xx-large;">Jumping Life</p>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                    <div id="funtime" class="container-fluid">
+                        <div class="row">
+                            <div class="col-4 themeTitle3">
+                                <h1 style="text-align: center;"><b>Fun Time</b></h1>
+                            </div>
+                            <div class="col-8" id="funtimetheme">
+                                <h4>Start bracing yourself at the Fun time to encounter the fabulous and insane rides!</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <a class="nav-link" href="#"><img src="images/ferriswheel.jpg" width="100%" alt="" height="400px"></a>
+                                <p style="text-align: center; font-size: xx-large;">P2P Sky Wheel</p>
+                            </div>
+                            <div class="col">
+                                <a class="nav-link" href="#"><img src="images/roller coaster.jpeg" width="100%" alt="" height="400px"></a>
+                                <p style="text-align: center; font-size: xx-large;">Palatela </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <a class="nav-link" href="#"><img src="images/pirateship.jpg" height="400px" alt="" width="100%"></a>
+                                <p style="text-align: center; font-size: xx-large;">Ship Wreck</p>
+                            </div>
+                            <div class="col">
+                                <a class="nav-link" href="#"><img src="images/merry-go-round.jpg" height="400px" alt="" width="100%"></a>
+                                <p style="text-align: center; font-size: xx-large;">Magical Round</p>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+
+                    <!--Show Schedules-->
+                    <!--Light Show-->
+                    <div id="lightshow">
+                        <div class="container-fluid">
+                            <div id="lightshowschedule" class="row">
+                                <div class="col">
+                                    <img src="images/5DLighting.jpg" alt="" width="100%" height="400px">
+                                </div>
+                                <div class="col">
+                                    <h3 style="text-align: center;"><b>5D Lighting Show</b></h3>
+                                    <ul class="attractionbullet">
+                                        <li>
+                                            <i>(<b>8:30PM ~ 9:30AM</b>)Encounter at Light Tower</i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                    <!--Wild West-->
+                    <div id="wildwest">
+                        <div class="container-fluid">
+                            <div id="wildwestschedule" class="row">
+                                <div class="col">
+                                    <img src="images/TreasureHunters.jpg" alt="" width="100%" height="400px">
+                                </div>
+                                <div class="col">
+                                    <h3 style="text-align: center;"><b>Wild West Show schedule</b></h3>
+                                    <ul class="attractionbullet">
+                                        <li>
+                                            <i>(<b>10:30AM ~ 11:30AM</b>)Encounter at the OK Corral</i>
+                                        </li>
+                                        <li>
+                                            <i>(<b>02:30PM ~ 04:30AM</b>)Texas Red and the Arizona Ranger</i>
+                                        </li>
+                                        <li>
+                                            <i> (<b>6:30PM ~ 08:30PM</b>)An Evening on the Prairie</i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                    <!--Medieval-->
+                    <div id="medieval">
+                        <div class="container-fluid">
+                            <div id="medievalschedule" class="row">
+                                <div class="col">
+                                    <img src="images/Heritage%20Trail.jpg" alt="" width="100%" height="400px">
+                                </div>
+                                <div class="col">
+                                    <h3 style="text-align: center;"><b>Magical Middle Ages Show schedule</b></h3>
+                                    <ul class="attractionbullet">
+                                        <li>
+                                            <i>(<b>10:30AM ~ 11:30AM</b>) A Knight at Dawn</i>
+                                        </li>
+                                        <li>
+                                            <i>(<b>02:30PM ~ 04:30AM</b>) Princess and the Plumber</i>
+                                        </li>
+                                        <li>
+                                            <i>(<b>6:30PM ~ 08:30PM</b>) Classic tales of the Brothers Grimm </i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                    <!--Space-->
+                    <div id="space">
+                        <div class="container-fluid">
+                            <div id="spaceschedule" class="row">
+                                <div class="col">
+                                    <img src="images/bigspacegalaxy.jpg" alt="" width="100%" height="400px">
+                                </div>
+                                <div class="col">
+                                    <h3 style="text-align: center;"><b>Space: The Penultimate Frontier Show schedule</b></h3>
+                                    <ul class="attractionbullet">
+                                        <li>
+                                            <i>(<b>10:30AM ~ 11:30AM</b>) Dawn of a new Age</i>
+                                        </li>
+                                        <li>
+                                            <i>(<b>02:30PM ~ 04:30AM</b>) Trekking through the Cosmos</i>
+                                        </li>
+                                        <li>
+                                            <i>(<b>6:30PM ~ 08:30PM</b>) Journey into the Night Sky</i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                    <!--Food-->
+                    <div id="food">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="images/restaurant.jpg" alt="" width="100%" height="400px">
+                                </div>
+                                <div class="col">
+                                    <h3><b>Fossil Fuels</b></h3>
+                                    <h4>Fossil Fuels, where classical ambience meets the rugged flavour of the outdoors.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="images/underwatercafe.jpg" alt="" width="100%" height="400px">
+                                </div>
+                                <div class="col">
+                                    <h3><b>UnderWater Restaurant</b></h3>
+                                    <h4>Underwater Restaurant, dine with love ones or family under the water while enjoying the view of many different varity of fishes swiming around.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="images/medievalCafe.jpg" alt="" width="100%" height="400px">
+                                </div>
+                                <div class="col">
+                                    <h3><b>Medieval Cafe</b></h3>
+                                    <h4>Medieval Cafe, dine and enjoy the wonderful feel of the Medieval times with wonderful Medieval Theme food.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="images/StarBot Cafe.jpg" alt="" width="100%" height="400px">
+                                </div>
+                                <div class="col">
+                                    <h3><b>StarBot Café™</b></h3>
+                                    <h4>StarBot Café™, dine and see all the the amazing new inventions that the future beholds.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="images/starbucks.jpg" alt="" width="100%" height="400px">
+                                </div>
+                                <div class="col">
+                                    <h3><b>Starbucks Cafe</b></h3>
+                                    <h4>Starbucks Cafe, come Sit back relax and enjoy a coffee or two.</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <!--footer-->
+    <footer>
+        <table style="width: 100%; border:none">
+            <tr>
+                <!--contact us details-->
+                <td style="width: 20%;">
+                    <h4>Contact Us</h4>
+
+                    <b>+65 xxxx xxxx</b>
+                </td>
+                <td style="width: 60%;">
+                    <h4 style="text-align: center;">Opening hours today:
+                        <br />
+                        <span id="openingHours2"></span></h4>
+                </td>
+                <td style="width: 20%;">
+                    <div class="container">
+                        <!--social medai links-->
+                        <h4>LINKS</h4>
+                        <div class="row row-cols-2">
+                            <div class="col">
+                                <img src="images/instagram.jpg" alt="" width="30" height="30">
+                            </div>
+                            <div class="col">
+                                <img src="images/facebook.png" alt="" width="30" height="30">
+                            </div>
+                            <div class="col">
+                                <img src="images/twitter.jpg" alt="" width="30" height="30">
+                            </div>
+                            <div class="col">
+                                <img src="images/pinterest.jpg" alt="" width="30" height="30">
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <!--button links-->
+        <button type="button" class="footerbuttons">BUY TICKETS</button>
+        <button type="button" class="footerbuttons">Careers</button>
+        <button type="button" class="footerbuttons">Corporate Enquiries</button>
+    </footer>
+</body>
+<!--javascript file -->
+<script src="javascript/jquery.min.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/openinghours.js"></script>
+<script>
+    function DisplayAttraction(Attraction) {
+        //linking to html
+        let Space = document.getElementById("space");
+        let WildWest = document.getElementById("wildwest");
+        let Medieval = document.getElementById("medieval");
+        let Food = document.getElementById("food");
+        let Title = document.getElementById("AttractionTitle");
+        let FutureRides = document.getElementById("future");
+        let LightShow = document.getElementById("lightshow");
+        let TraditionalRides = document.getElementById("traditional");
+        let FunTime = document.getElementById("funtime");
+
+        //Hide all other non related attractions
+        if (Attraction == "space") {
+            Title.innerHTML = "<b>Space: The Penultimate Frontier Show schedule</b>";
+            Title.hidden = false;
+            Space.hidden = false;
+            WildWest.hidden = true;
+            Medieval.hidden = true;
+            Food.hidden = true;
+            FutureRides.hidden = true;
+            LightShow.hidden = true;
+            TraditionalRides.hidden = true;
+            FunTime.hidden = true;
+        } else if (Attraction == "wildwest") {
+            Title.innerHTML = "<b>Wild West Show schedule</b>";
+            Title.hidden = false;
+            Space.hidden = true;
+            WildWest.hidden = false;
+            Medieval.hidden = true;
+            Food.hidden = true;
+            FutureRides.hidden = true;
+            LightShow.hidden = true;
+            TraditionalRides.hidden = true;
+            FunTime.hidden = true;
+        } else if (Attraction == "medieval") {
+            Title.innerHTML = "<b>Magical Middle Ages Show schedule</b>";
+            Title.hidden = false;
+            Space.hidden = true;
+            WildWest.hidden = true;
+            Medieval.hidden = false;
+            Food.hidden = true;
+            FutureRides.hidden = true;
+            LightShow.hidden = true;
+            TraditionalRides.hidden = true;
+            FunTime.hidden = true;
+        } else if (Attraction == "food") {
+            Title.innerHTML = "<b>Dining</b>";
+            Title.hidden = false;
+            Space.hidden = true;
+            WildWest.hidden = true;
+            Medieval.hidden = true;
+            Food.hidden = false;
+            FutureRides.hidden = true;
+            LightShow.hidden = true;
+            TraditionalRides.hidden = true;
+            FunTime.hidden = true;
+        } else if (Attraction == "lightshow") {
+            Title.innerHTML = "<b>5D LightShow</b>";
+            Title.hidden = false;
+            Space.hidden = true;
+            WildWest.hidden = true;
+            Medieval.hidden = true;
+            Food.hidden = true;
+            FutureRides.hidden = true;
+            LightShow.hidden = false;
+            TraditionalRides.hidden = true;
+            FunTime.hidden = true;
+        } else if (Attraction == "future") {
+            Title.innerHTML = "";
+            Title.hidden = true;
+            Space.hidden = true;
+            WildWest.hidden = true;
+            Medieval.hidden = true;
+            Food.hidden = true;
+            FutureRides.hidden = false;
+            LightShow.hidden = true;
+            TraditionalRides.hidden = true;
+            FunTime.hidden = true;
+        } else if (Attraction == "past") {
+            Title.innerHTML = "";
+            Title.hidden = true;
+            Space.hidden = true;
+            WildWest.hidden = true;
+            Medieval.hidden = true;
+            Food.hidden = true;
+            FutureRides.hidden = true;
+            LightShow.hidden = true;
+            TraditionalRides.hidden = false;
+            FunTime.hidden = true;
+        } else if (Attraction == "funtime") {
+            Title.innerHTML = "";
+            Title.hidden = true;
+            Space.hidden = true;
+            WildWest.hidden = true;
+            Medieval.hidden = true;
+            Food.hidden = true;
+            FutureRides.hidden = true;
+            LightShow.hidden = true;
+            TraditionalRides.hidden = true;
+            FunTime.hidden = false;
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--title-->
+    <title>Project S110</title>
+
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Theme Park website for Project S110">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--external css-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/park.css" rel="stylesheet" type="text/css">
+
+    <!--Internal/Embedded CSS-->
+    <style>
+        h6 {
+            text-align: center;
+        }
+        
+        h3 {
+            text-align: center;
+        }
+        
+        ul,
+        li {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!--website view buttons-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col TitleButton">
+                <button type="button" id="updateandpromo">Latest Promotions/Impt. Updates</button>
+            </div>
+            <div class="col TitleButton">
+                <div id="openingtime">
+                    Opening Time for today <br />
+                    <span id="openingHours"></span>
+                </div>
+            </div>
+            <div class="col TitleButton">
+
+                <button type="button" id="buyticks">BUY <br/> TICKETS</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Logo and title-->
+    <div id="logoandtitle">
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 20%;">
+                    <!---Logo Pic-->
+                    <a href="index.html">
+                        <img src="images/Logov2.png" alt="" width="80%" height="200px">
+                    </a>
+                </td>
+                <td style="width: 80%;">
+                    <!--TITLE-->
+                    <h1 style="text-align: center; font-size: 70px;"> <b style="color: red;">PAST</b> <b style="color: purple;">2</b> <b style="color: blue;">FUTURE</b><b style="color: #F1690A;"> PARK</b></h1>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <!--menu bar in mobile view-->
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+                    <span class="navbar-toggler-icon"></span> 
+                </button>
+
+            <div class="collapse navbar-collapse"></div>
+
+            <!--navbar menu in webview-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="attraction.html">Attraction </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="accommodation.html">Accommodation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--information-->
+    <div class="container-fluid" id="BGimage">
+
+        <!--buttons for navigations-->
+        <div class="row menubar">
+            <div style="height: 300px;width: 100%;">
+            </div>
+            <div class="col">
+                <a href="#Recommendations">
+                    <button type="button" class="menubarbutton recommendationlist">RECOMMENDATIONS</button>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#Shows">
+                    <button type="button" class="menubarbutton showlist">SHOW</button>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#Shopping">
+                    <button type="button" class="menubarbutton foodlist">FOOD & SHOPPING</button>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#News">
+                    <button type="button" class="menubarbutton newlist">NEWS</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="Recommendations">
+        <div class="container-fluid">
+            <h3><b>Recommendations</b></h3>
+            <!--contents for Recommendations-->
+            <div class="row">
+                <div class="col-sm">
+                    <h6><b><u>Futuristic roller Coaster</u></b></h6>
+                    <img src="images/roller coaster.jpeg" alt="" width="100%" height="250px">
+                    <p><i>Be the first to take the first ever</i> <b>Futuristic roller Coaster Bridge</b></p>
+                </div>
+                <div class="col-sm">
+                    <h6><b><u>Party Go Round</u></b></h6>
+                    <img src="images/merry-go-round.jpg" alt="" width="100%" height="250px">
+                    <p><i>Take a ride on our wild carousel</i> <b>Party Go Round</b></p>
+                </div>
+                <div class="col-sm">
+                    <h6><b><u>StarBot Café™</u></b></h6>
+                    <img src="images/StarBot Cafe.jpg" alt="" width="100%" height="250px">
+                    <p>
+                        <b>Quick-service restaurant serving Japanese cuisine</b> like chicken karaage, ramen and sushi.
+                    </p>
+                </div>
+                <div class="col-sm">
+                    <h6><b><u>Fossil Fuels™</u></b></h6>
+                    <img src="images/restaurant.jpg" alt="" width="100%" height="250px">
+                    <p>
+                        Refuel for more prehistoric adventuring! At <b>Fossil Fuels™</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <!--contents for shows-->
+    <div class="container-fluid" id="Shows">
+        <h3><b>Shows</b></h3>
+        <div class="row">
+            <div class="col-sm">
+                <h6><b>Heritage Trail</b></h6>
+                <img src="images/Heritage Trail.jpg" alt="" width="100%" height="300px">
+            </div>
+            <div class="col-sm">
+                <h6><b>Wild West</b></h6>
+                <img src="images/TreasureHunters.jpg" alt="" width="100%" height="300px">
+            </div>
+            <div class="col-sm">
+                <h6><b>5D Lighting Show</b></h6>
+                <img src="images/5DLighting.jpg" alt="" width="100%" height="300px">
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <!--contents for Food & shopping-->
+    <div class="container-fluid" id="Shopping">
+        <h3><b>Food & Shopping</b></h3>
+        <div class="row">
+            <div class="col-sm">
+                <h6><b>Lego Store</b></h6>
+                <img src="images/legostore.jpg" alt="" width="100%" height="250px">
+            </div>
+            <div class="col-sm">
+                <h6><b>Underwater Restaurant</b></h6>
+                <img src="images/underwaterdining.jpg" alt="" width="100%" height="250px">
+            </div>
+            <div class="col-sm">
+                <h6><b>Candylicious</b></h6>
+                <img src="images/Candylicious.jpg" alt="" width="100%" height="250px">
+            </div>
+            <div class="col-sm">
+                <h6><b>Starbucks</b></h6>
+                <img src="images/starbucks.jpg" alt="" width="100%" height="250px">
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <!--contents for News-->
+    <div class="container-fluid" id="News">
+        <h3><b>News</b></h3>
+        <ul style="list-style: none;">
+            <li>
+                Dear Customers and visitors due to the covid-19 situation please wear a mask at all times
+            </li>
+            <li>
+                There is a <b><u><i>5% discounts</i></u></b> if you use American Express for all tickets upon entry to <b>Past 2 Future</b>
+            </li>
+        </ul>
+    </div>
+    <br />
+    <!--footer-->
+    <footer>
+        <table style="width: 100%; border:none">
+            <tr>
+                <!--contact us details-->
+                <td style="width: 20%;">
+                    <h4>Contact Us</h4>
+
+                    <b>+65 xxxx xxxx</b>
+                </td>
+                <td style="width: 60%;">
+                    <h4 style="text-align: center;">Opening hours today:
+                        <br />
+                        <span id="openingHours2"></span></h4>
+                </td>
+                <td style="width: 20%;">
+                    <div class="container">
+                        <!--social medai links-->
+                        <h4>LINKS</h4>
+                        <div class="row row-cols-2">
+                            <div class="col">
+                                <img src="images/instagram.jpg" alt="" width="30" height="30">
+                            </div>
+                            <div class="col">
+                                <img src="images/facebook.png" alt="" width="30" height="30">
+                            </div>
+                            <div class="col">
+                                <img src="images/twitter.jpg" alt="" width="30" height="30">
+                            </div>
+                            <div class="col">
+                                <img src="images/pinterest.jpg" alt="" width="30" height="30">
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <!--button links-->
+        <button type="button" class="footerbuttons">BUY TICKETS</button>
+        <button type="button" class="footerbuttons">Careers</button>
+        <button type="button" class="footerbuttons">Corporate Enquiries</button>
+    </footer>
+</body>
+<!--javascript file -->
+<script src="javascript/jquery.min.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/openinghours.js"></script>
+<script>
+    i = 0;
+    setInterval(function() {
+        let backgroundimg = document.getElementById("BGimage");
+        var images = ["images/bg3.jpg", "images/bg2.jpg", "images/bg1.jpg"];
+        backgroundimg.style.backgroundImage = "url(" + images[i] + ")";
+        i = i + 1;
+        if (i == images.length) {
+            i = 0;
+        }
+    }, 3000);
+</script>
+
+</html>
